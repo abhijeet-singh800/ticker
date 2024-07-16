@@ -7,5 +7,5 @@ body::-webkit-scrollbar {
 }
 
 body {
-    @apply w-[600px] bg-black border-2       /* Remove the Border Property when Deploying */
+    @apply w-[600px] bg-cBlack border-2       /* Remove the Border Property when Deploying */
 }
