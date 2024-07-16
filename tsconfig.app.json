@@ -21,7 +21,14 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    "baseUrl": "../",
+    "paths": {
+      "@/*": ["./*"],
+      "@server/*": ["./server/src/*"],
+      "@src/*":["src"]
+    },
   },
   "include": ["src","src/build"]
 }
