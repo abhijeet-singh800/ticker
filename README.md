@@ -7,6 +7,7 @@ Ticker is an Open Source Chrome Extension that can (currently) manage your ToDo 
 ![Static Badge](https://img.shields.io/badge/React_Router-React_Router?style=flat&logo=reactrouter&color=%23000000)
 ![Static Badge](https://img.shields.io/badge/TypeScript-TypeScript?style=flat&logo=typescript&color=%23000000)
 ![Static Badge](https://img.shields.io/badge/TailWind-TailWind?style=flat&logo=tailwindcss&color=%23000000)
+![Static Badge](https://img.shields.io/badge/Zod-Zod?logo=zod&logoColor=white&labelColor=black&color=black)
 ![Static Badge](https://img.shields.io/badge/shadcnUI-shadcnUI?style=flat&logo=shadcnui&color=%23000000)
 ![Static Badge](https://img.shields.io/badge/ESLint-ESLint?style=flat&logo=eslint&color=%23000000)
 ![Static Badge](https://img.shields.io/badge/PostCSS-PostCSS?style=flat&logo=postcss&color=%23000000)
@@ -31,6 +32,7 @@ The uninstall procedure is same as all other Extensions, just go to `chrome://ex
 
 ### TODO
 This section lists the things that I am currently working on for this Repo
+- Nested Tasks
 - Adding Google OAuth 
 - Intigrating Google Tasks API
 - Intigrating Google Calenders API

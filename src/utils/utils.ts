@@ -6,15 +6,6 @@ type TaskListObj = {
     title: string;
 }
 
-type Task = {
-    title: string,
-    notes: string | null,
-    id: string,
-    listId: string,
-    stared: boolean,
-    completed: boolean
-}[]
-
 type TaskObj = {
     title: string,
     notes: string | null,

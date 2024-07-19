@@ -23,11 +23,11 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
 
-    "baseUrl": "../",
+    "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
       "@server/*": ["./server/src/*"],
-      "@src/*":["src"]
+      "@src/*":["src/*"]
     },
   },
   "include": ["src","src/build"]
