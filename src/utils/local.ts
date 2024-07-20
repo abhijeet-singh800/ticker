@@ -20,106 +20,55 @@ type Settings = {
 
 //  Task List Local Functions 
 export function getTaskList() {
-    return new Promise((resolve, reject) => {
-        chrome.storage.local.get(['taskList'], result => {
-            if (chrome.runtime.lastError) {
-                reject()
-            } else {
-                resolve(result.taskList)
-            }
-        })
-    })
+    const data = window.localStorage.getItem('taskList')
+    if (data !== null) {
+        return JSON.parse(data)
+    }
 }
 
 export function setTaskList(target: TaskListObj[]) {
     const data: string = JSON.stringify(target)
-    return new Promise<void>((resolve, reject) => {
-        chrome.storage.local.set({ 'taskList': data }, () => {
-            if (chrome.runtime.lastError) {
-                reject()
-            } else {
-                resolve()
-            }
-        })
-    })
+    window.localStorage.setItem('taskList', data)
 }
 
 
 // Task Local Function 
 export function getTask() {
-    return new Promise((resolve, reject) => {
-        chrome.storage.local.get(['task'], result => {
-            if (chrome.runtime.lastError) {
-                reject()
-            } else {
-                resolve(result.task)
-            }
-        })
-    })
+    const data = window.localStorage.getItem('task')
+    if (data !== null) {
+        return JSON.parse(data)
+    }
 }
 
 export function setTask(target: TaskObj[]) {
     const data: string = JSON.stringify(target)
-    return new Promise<void>((resolve, reject) => {
-        chrome.storage.local.set({ 'task': data }, () => {
-            if (chrome.runtime.lastError) {
-                reject()
-            } else {
-                resolve()
-            }
-        })
-    })
+    window.localStorage.setItem('task', data)
 }
 
 // Settings Local Function 
 export function getSetting() {
-    return new Promise((resolve, reject) => {
-        chrome.storage.local.get(['settings'], result => {
-            if (chrome.runtime.lastError) {
-                reject()
-            } else {
-                resolve(result.settings)
-            }
-        })
-    })
+    const data = window.localStorage.getItem('settings')
+    if (data !== null) {
+        return JSON.parse(data)
+    }
 }
 
-export function setSettings(target: Settings[]) {
+export function setSettings(target: Settings) {
     const data: string = JSON.stringify(target)
-    return new Promise<void>((resolve, reject) => {
-        chrome.storage.local.set({ 'settings': data }, () => {
-            if (chrome.runtime.lastError) {
-                reject()
-            } else {
-                resolve()
-            }
-        })
-    })
+    window.localStorage.setItem('settings', data)
 }
 
 
 // ifFirst Local Function 
-export function getIsFirst() {
-    return new Promise((resolve, reject) => {
-        chrome.storage.local.get(['isFirst'], result => {
-            if (chrome.runtime.lastError) {
-                reject("hello")
-            } else {
-                resolve(result.isFirst)
-            }
-        })
-    })
+export function IsFirst() {
+    if (window.localStorage.getItem('isFirst') !== null) {
+        return true
+    } else {
+        return false
+    }
 }
 
 export function setIsFirst(target: boolean) {
     const data: string = JSON.stringify(target)
-    return new Promise<void>((resolve, reject) => {
-        chrome.storage.local.set({ 'isFirst': data }, () => {
-            if (chrome.runtime.lastError) {
-                reject()
-            } else {
-                resolve()
-            }
-        })
-    })
+    window.localStorage.setItem('isFirst', data)
 }
