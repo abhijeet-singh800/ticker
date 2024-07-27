@@ -21,16 +21,18 @@ export function createTask(target: TaskObj[], set: (a: TaskObj[]) => void, title
     const data: TaskObj[] = target
     const element: TaskObj = { title: title, notes: notes, id: uuidv4(), listId: listId, stared: false, completed: false }
     data.unshift(element)
-    set(data)
+    const new_data = [...data]
+    set(new_data)
 }
 
-export function taskObject(target: TaskObj[], id: string): TaskListObj {
+export function taskObject(target: TaskObj[], id: string): TaskObj {
     const element: TaskObj = target.filter(obj => obj.id == id)[0]
     return element
 }
 
 export function updatedTask(target: TaskObj[], set: (a: TaskObj[]) => void, id: string, property: string, value: string): void {
     const data: TaskObj[] = target
+
     const index: number = data.findIndex(obj => obj.id === id)
     const element: TaskObj = data[index]
     property == 'title' && (element.title = value)
@@ -54,7 +56,20 @@ export function updatedTask(target: TaskObj[], set: (a: TaskObj[]) => void, id: 
             console.log('Invalid Value')
         }
     }
-    set(data)
+    const new_data = [...data]
+    set(new_data)
+}
+
+export function updatedTaskForm(target: TaskObj[], set: (a: TaskObj[]) => void, id: string, title: string, notes: string | null, listId: string): void {
+    const data: TaskObj[] = target
+
+    const index: number = data.findIndex(obj => obj.id === id)
+    const element: TaskObj = data[index]
+    element.title = title
+    element.notes = notes
+    element.listId = listId
+    const new_data = [...data]
+    set(new_data)
 }
 
 export function deleteTask(target: TaskObj[], set: (a: TaskObj[]) => void, array: string[]): void {
@@ -65,7 +80,8 @@ export function deleteTask(target: TaskObj[], set: (a: TaskObj[]) => void, array
             target.splice(index, 1)
         }
     })
-    set(data)
+    const new_data = [...data]
+    set(new_data)
 }
 
 
@@ -78,7 +94,8 @@ export function createTaskList(target: TaskListObj[], set: (a: TaskListObj[]) =>
         id: uuidv4(),
         title: title
     })
-    set(data)
+    const new_data = [...data]
+    set(new_data)
 }
 
 export function taskListObject(target: TaskListObj[], id: string): TaskListObj {
@@ -91,7 +108,8 @@ export function updateTaskList(target: TaskListObj[], set: (a: TaskListObj[]) =>
     const index: number = data.findIndex(obj => obj.id === id)
     const element: TaskListObj = data[index]
     element.title = title
-    set(data)
+    const new_data = [...data]
+    set(new_data)
 }
 
 export function deleteTaskList(target: TaskListObj[], setTaskList: (a: TaskListObj[]) => void, tasks: TaskObj[], setTask: (a: TaskObj[]) => void, id: string): void {
@@ -105,7 +123,8 @@ export function deleteTaskList(target: TaskListObj[], setTaskList: (a: TaskListO
             }
         })
         data.splice(index, 1)
-        setTaskList(data)
+        const new_data = [...data]
+        setTaskList(new_data)
         deleteTask(tasks, setTask, task_list)
     }
 }

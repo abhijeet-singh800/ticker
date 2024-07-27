@@ -26,7 +26,7 @@ export function getTaskList() {
     }
 }
 
-export function setTaskList(target: TaskListObj[]) {
+export function setTaskListLocal(target: TaskListObj[]) {
     const data: string = JSON.stringify(target)
     window.localStorage.setItem('taskList', data)
 }
@@ -40,7 +40,7 @@ export function getTask() {
     }
 }
 
-export function setTask(target: TaskObj[]) {
+export function setTaskLocal(target: TaskObj[]) {
     const data: string = JSON.stringify(target)
     window.localStorage.setItem('task', data)
 }
@@ -61,7 +61,7 @@ export function setSettings(target: Settings) {
 
 // ifFirst Local Function 
 export function IsFirst() {
-    if (window.localStorage.getItem('isFirst') !== null) {
+    if (window.localStorage.getItem('isFirst') == null) {
         return true
     } else {
         return false
