@@ -63,7 +63,13 @@
   * {
     @apply border-border;
   }
-  body {
-    @apply w-[600px] bg-cBlack border-2
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
   }
+
+  body {
+    @apply w-[600px] bg-cBlack font-poppins no-scrollbar
+  }
+  
 }
