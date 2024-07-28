@@ -1,12 +1,11 @@
 import { Link, useLocation } from 'react-router-dom'
 import { Button } from '@src/shadcn/components/ui/button'
 import '@src/main.css'
-
 export default function NotFound() {
 
     // For Debugging 
     const location = useLocation()
-    console.log(location.pathname)
+    console.log('Current Location:', location.pathname)
 
 
     return (
