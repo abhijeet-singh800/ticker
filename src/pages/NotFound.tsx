@@ -1,8 +1,14 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { Button } from '@src/shadcn/components/ui/button'
 import '@src/main.css'
 
 export default function NotFound() {
+
+    // For Debugging 
+    const location = useLocation()
+    console.log(location.pathname)
+
+
     return (
         <div className='text-center flex flex-col align-middle'>
             <h1 className='text-cWhite font-poppins text-8xl p-3' >404</h1>

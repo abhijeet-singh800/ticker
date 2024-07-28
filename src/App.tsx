@@ -18,6 +18,7 @@ if (IsFirst()) {
 }
 
 export default function Test() {
+
     const local = getTask()
     const taskListLocal = getTaskList()
     const [original, setOriginal] = React.useState(local)
@@ -58,6 +59,7 @@ export default function Test() {
             <BrowserRouter>
                 <Routes>
                     <Route path='/' element={<Home original={original} setOriginal={setOriginal} Array={Array} setFilter={setFilter} setList={setList} taskList={taskList} />} />
+                    <Route path='index.html' element={<Home original={original} setOriginal={setOriginal} Array={Array} setFilter={setFilter} setList={setList} taskList={taskList} />} />
                     <Route path='onboard' element={<Onboard setTaskList={setTaskList} setOriginal={setOriginal} />} />
                     <Route path='settings' element={<Settings setTaskList={setTaskList} setOriginal={setOriginal} />} />
                     <Route path='list' element={<NewTaskList taskList={taskList} setTaskList={setTaskList} />} />

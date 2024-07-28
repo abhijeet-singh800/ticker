@@ -1,19 +1,19 @@
 {
-    "manifest_version": 3,
-    "name": "Ticker",
-    "description": "A productivity focused extension made by the People, for the People.",
-    "version": "0.0.1",
-    "icons": {
-      "16": "icon/extension-icon.png",
-      "32": "icon/extension-icon.png",
-      "48": "icon/extension-icon.png",
-      "128": "icon/extension-icon.png"
-    },
-    "action": {
-      "default_popup": "index.html"
-    },
-    "permissions": [
-      "storage",
-      "unlimitedStorage"
-    ]
-  }
+  "manifest_version": 3,
+  "name": "Ticker",
+  "description": "A productivity focused extension made by the People, for the People.",
+  "version": "0.0.1",
+  "icons": {
+    "16": "icon/extension-icon.png",
+    "32": "icon/extension-icon.png",
+    "48": "icon/extension-icon.png",
+    "128": "icon/extension-icon.png"
+  },
+  "action": {
+    "default_popup": "index.html"
+  },
+  "permissions": [
+    "storage",
+    "unlimitedStorage"
+  ]
+}
