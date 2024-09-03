@@ -17,7 +17,7 @@ export function Home(props: { original: TaskObj[], setOriginal: (obj: TaskObj[])
   return (
     <div>
       <Greet />
-      <div className="flex mt-8">
+      <div className="flex mt-3">
         <div className='w-2/3'>
           <HomePanel setFilter={props.setFilter} setList={props.setList} taskList={props.taskList} />
         </div>
