@@ -69,10 +69,10 @@ export default function HomePanel(props: { setFilter: (data: string) => void, se
                         <SelectTrigger>
                             <SelectValue placeholder="Filter" />
                         </SelectTrigger>
-                        <SelectContent>
-                            <SelectItem value="all">No Filters Applied</SelectItem>
-                            <SelectItem value="star">Only Show Starred</SelectItem>
-                            <SelectItem value="comp">Only Show Completed</SelectItem>
+                        <SelectContent className='max-w-[11rem]'>
+                            <SelectItem value="all" className='pl-2'>No Filters Applied</SelectItem>
+                            <SelectItem value="star" className='pl-2'>Only Show Starred</SelectItem>
+                            <SelectItem value="comp" className='pl-2'>Only Show Completed</SelectItem>
                         </SelectContent>
                     </Select>
                 </div>

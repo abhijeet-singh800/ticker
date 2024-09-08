@@ -34,9 +34,9 @@ export default function Greet() {
                 <h2 className='text-5xl text-cWhite font-poppins font-medium'>{greet}</h2>
                 <h1 className='text-8xl text-cWhite font-poppins font-medium h-[110px]'>{name}</h1>
             </div>
-            <div>
+            <div className='w-[225px] items-center flex justify-center'>
                 <Link to='/new' className='btn'>
-                    <Button className='m-14 w-min'><Plus /></Button>
+                    <Button className='w-min'><Plus /></Button>
                 </ Link>
             </div>
         </div>
