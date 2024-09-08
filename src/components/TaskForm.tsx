@@ -148,7 +148,7 @@ export default function TaskForm(props: { new: string, original: TaskObj[], setO
                             <FormItem >
                                 <FormLabel className='hidden'>Enter you Task Notes</FormLabel>
                                 <FormControl>
-                                    <Textarea placeholder="Type your Task Notes." value={field.value ?? ''} onChange={field.onChange} className='h-80 text-lg' />
+                                    <Textarea placeholder="Type your Task Notes." value={field.value ?? ''} onChange={field.onChange} className='h-72 text-lg' />
                                 </FormControl>
                                 <FormMessage className='text-center' />
                             </FormItem>
