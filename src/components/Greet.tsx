@@ -29,7 +29,7 @@ export default function Greet() {
 
     return (
         <div className='flex'>
-            <div className='m-3 max-w-[395px]  overflow-hidden'>
+            <div className='m-3 w-[395px]  overflow-hidden'>
 
                 <h2 className='text-5xl text-cWhite font-poppins font-medium'>{greet}</h2>
                 <h1 className='text-8xl text-cWhite font-poppins font-medium h-[110px]'>{name}</h1>
