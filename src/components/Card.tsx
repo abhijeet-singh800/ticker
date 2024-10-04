@@ -52,10 +52,10 @@ export default function Cards(props: { Array: TaskObj[], original: TaskObj[], se
     const cardsData = props.Array.map((item: TaskObj) => {
         return (
 
-            <div key={item.id} data-cy="card" taskid={item.id} className='z-0'>
+            <div key={item.id} data-cy="card" id={item.id} className='z-0'>
                 <div className='float-right -translate-x-10 translate-y-6'>
                     <DropdownMenu  >
-                        <DropdownMenuTrigger className='mt-2 z-10' data-cy="card-drop" taskid={item.id}><EllipsisVertical /></DropdownMenuTrigger>
+                        <DropdownMenuTrigger className='mt-2 z-10' data-cy="card-drop" id={item.id}><EllipsisVertical /></DropdownMenuTrigger>
                         <DropdownMenuContent>
                             <DropdownMenuItem onClick={(event) => Complete(item.id, item.completed, event)}>{item.completed == true ? 'Mark as Pending' : 'Mark as Completed'}</DropdownMenuItem>
                             <DropdownMenuItem onClick={(event) => Star(item.id, item.stared, event)}>{item.stared == true ? 'Remove the Star' : 'Mark as Stared'}</DropdownMenuItem>

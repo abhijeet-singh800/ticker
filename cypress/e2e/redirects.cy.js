@@ -37,15 +37,15 @@ describe('Testing the Redirects for the App', () => {
     })
 
     it('Testing Card Redirects', () => {
-        cy.get('[data-cy="card"][taskid=1]').click()
+        cy.get('[data-cy="card"][id=1]').click()
         cy.url().should('include', '/task/1')
 
         cy.visit('/')
-        cy.get('[data-cy="card"][taskid=8]').click()
+        cy.get('[data-cy="card"][id=8]').click()
         cy.url().should('include', '/task/8')
 
         cy.visit('/')
-        cy.get('[data-cy="card"][taskid=5]').click()
+        cy.get('[data-cy="card"][id=5]').click()
         cy.url().should('include', '/task/5')
     })
 })

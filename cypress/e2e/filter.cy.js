@@ -13,12 +13,12 @@ describe('Testing the Filtering Functions', () => {
         cy.get('[data-cy="home-prop-filter"]').click()
         cy.selectClick('No Filters Applied')
 
-        cy.get('[data-cy="card"][taskid]').should('have.length', 8)
+        cy.get('[data-cy="card"]').should('have.length', 8)
 
         cy.get('[data-cy="home-taskList-filter"]').click()
         cy.selectClick('List1')
-        cy.get('[data-cy="card"][taskid]').each(($el) => {
-            const taskId = $el.attr('taskid')
+        cy.get('[data-cy="card"]').each(($el) => {
+            const taskId = $el.attr('id')
             cy.window().then((window) => {
                 const task = JSON.parse(window.localStorage.getItem('task')).find(task => task.id === taskId);
                 cy.wrap(task.listId).should('eq', '1')
@@ -27,8 +27,8 @@ describe('Testing the Filtering Functions', () => {
 
         cy.get('[data-cy="home-taskList-filter"]').click()
         cy.selectClick('List2')
-        cy.get('[data-cy="card"][taskid]').each(($el) => {
-            const taskId = $el.attr('taskid')
+        cy.get('[data-cy="card"]').each(($el) => {
+            const taskId = $el.attr('id')
             cy.window().then((window) => {
                 const task = JSON.parse(window.localStorage.getItem('task')).find(task => task.id === taskId)
                 cy.wrap(task.listId).should('eq', '2')
@@ -43,8 +43,8 @@ describe('Testing the Filtering Functions', () => {
 
         cy.get('[data-cy="home-prop-filter"]').click()
         cy.selectClick('Only Show Starred')
-        cy.get('[data-cy="card"][taskid]').each(($el) => {
-            const taskId = $el.attr('taskid')
+        cy.get('[data-cy="card"]').each(($el) => {
+            const taskId = $el.attr('id')
             cy.window().then((window) => {
                 const task = JSON.parse(window.localStorage.getItem('task')).find(task => task.id === taskId)
                 cy.wrap(task.stared).should('eq', true)
@@ -54,8 +54,8 @@ describe('Testing the Filtering Functions', () => {
 
         cy.get('[data-cy="home-prop-filter"]').click()
         cy.selectClick('Only Show Completed')
-        cy.get('[data-cy="card"][taskid]').each(($el) => {
-            const taskId = $el.attr('taskid')
+        cy.get('[data-cy="card"]').each(($el) => {
+            const taskId = $el.attr('id')
             cy.window().then((window) => {
                 const task = JSON.parse(window.localStorage.getItem('task')).find(task => task.id === taskId)
                 cy.wrap(task.completed).should('eq', true)

@@ -6,7 +6,7 @@ describe('Testing Cards', () => {
     })
 
     it('Testing Mark Completed', () => {
-        cy.get('[data-cy="card-drop"][taskid="1"]').click()
+        cy.get('[data-cy="card-drop"][id="1"]').click()
         cy.selectDrop('Mark as Completed')
         cy.window().then((window) => {
             const task = JSON.parse(window.localStorage.getItem('task')).find(task => task.id == 1)
@@ -15,7 +15,7 @@ describe('Testing Cards', () => {
     })
 
     it('Testing Mark Pending', () => {
-        cy.get('[data-cy="card-drop"][taskid="5"]').click()
+        cy.get('[data-cy="card-drop"][id="5"]').click()
         cy.selectDrop('Mark as Pending')
         cy.window().then((window) => {
             const task = JSON.parse(window.localStorage.getItem('task')).find(task => task.id == 5)
@@ -25,7 +25,7 @@ describe('Testing Cards', () => {
     })
 
     it('Removing the Star', () => {
-        cy.get('[data-cy="card-drop"][taskid="1"]').click()
+        cy.get('[data-cy="card-drop"][id="1"]').click()
         cy.selectDrop('Remove the Star')
         cy.window().then((window) => {
             const task = JSON.parse(window.localStorage.getItem('task')).find(task => task.id == 1)
@@ -34,7 +34,7 @@ describe('Testing Cards', () => {
     })
 
     it('Adding the Star', () => {
-        cy.get('[data-cy="card-drop"][taskid="2"]').click()
+        cy.get('[data-cy="card-drop"][id="2"]').click()
         cy.selectDrop('Mark as Stared')
         cy.window().then((window) => {
             const task = JSON.parse(window.localStorage.getItem('task')).find(task => task.id == 2)
@@ -43,10 +43,10 @@ describe('Testing Cards', () => {
     })
 
     it('Testing Delete', () => {
-        cy.get('[data-cy="card-drop"][taskid="1"]').click()
+        cy.get('[data-cy="card-drop"][id="1"]').click()
         cy.selectDrop('Delete this Task')
 
-        cy.get('[data-cy="card"][taskid]').should('have.length', 7)
+        cy.get('[data-cy="card"]').should('have.length', 7)
     })
 
 

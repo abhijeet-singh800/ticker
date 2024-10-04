@@ -24,7 +24,7 @@ describe('New Task List', () => {
     })
 
     it('Updating Taks', () => {
-        cy.get('[data-cy="card"][taskid=1]').click()
+        cy.get('[data-cy="card"][id=1]').click()
         cy.get('[data-cy="newform-title-input"]').clear()
         cy.get('[data-cy="newform-title-input"]').type('Updated Text')
 
@@ -46,7 +46,7 @@ describe('New Task List', () => {
 
 
 
-        cy.get('[data-cy="card"][taskid=5]').click()
+        cy.get('[data-cy="card"][id=5]').click()
         cy.get('[data-cy="newform-title-input"]').clear()
         cy.get('[data-cy="newform-title-input"]').type('Updated Text 5')
 
