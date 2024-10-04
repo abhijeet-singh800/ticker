@@ -20,7 +20,7 @@ export default function Greet() {
     } else if (hours >= 22) {
         greet = 'Good Night'
     }
-    if (settings.first_name.length > 8 && settings.nick_name != "") {
+    if (settings.first_name.length >= 7 && settings.nick_name != "") {
         name = settings.nick_name
     } else {
         name = settings.first_name
@@ -31,12 +31,12 @@ export default function Greet() {
         <div className='flex'>
             <div className='m-3 w-[395px]  overflow-hidden'>
 
-                <h2 className='text-5xl text-cWhite font-poppins font-medium'>{greet}</h2>
-                <h1 className='text-8xl text-cWhite font-poppins font-medium h-[110px]'>{name}</h1>
+                <h2 data-cy="greet-greet" className='text-5xl text-cWhite font-poppins font-medium'>{greet}</h2>
+                <h1 data-cy="greet-name" className='text-8xl text-cWhite font-poppins font-medium h-[110px]'>{name}</h1>
             </div>
             <div className='w-[225px] items-center flex justify-center'>
                 <Link to='/new' className='btn'>
-                    <Button className='w-min'><Plus /></Button>
+                    <Button data-cy="home-new-button" className='w-min'><Plus /></Button>
                 </ Link>
             </div>
         </div>

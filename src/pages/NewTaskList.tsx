@@ -50,14 +50,14 @@ export default function NewTaskList(props: { taskList: TaskListObj[], setTaskLis
                             <FormItem className='my-2 max-w-[400px] ml-[90px] mt-4'>
                                 <FormLabel className='font-poppins text-cWhite text-base pl-2'>List Name</FormLabel>
                                 <FormControl>
-                                    <Input placeholder="New List" className='text-center text-lg' {...field} />
+                                    <Input data-cy="newTaskList-name" placeholder="New List" className='text-center text-lg' {...field} />
                                 </FormControl>
-                                <FormMessage className='text-center' />
+                                <FormMessage data-cy="newTaskList-message" className='text-center' />
                             </FormItem>
                         )}
                     />
                     <div className='pl-[200px] mt-4'>
-                        <Button type="submit" className='m-2 w-40'>Done</Button>
+                        <Button data-cy="newTaskList-submit" type="submit" className='m-2 w-40'>Done</Button>
                     </div>
                 </form>
             </Form>

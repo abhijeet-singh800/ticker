@@ -47,7 +47,7 @@ export default function HomePanel(props: { setFilter: (data: string) => void, se
         <div className='p-2 flex flex-col'>
             <div className='m-2'>
                 <Select onValueChange={HandleTask}>
-                    <SelectTrigger>
+                    <SelectTrigger data-cy="home-taskList-filter">
                         <SelectValue placeholder="Select a Task List" />
                     </SelectTrigger>
                     <SelectContent >
@@ -60,13 +60,13 @@ export default function HomePanel(props: { setFilter: (data: string) => void, se
             <div className='flex w-auto'>
                 <div className='m-2 w-1/2'>
                     <Link to='/settings'>
-                        <Button>Settings</Button>
+                        <Button data-cy="home-settings-button">Settings</Button>
                     </Link>
                 </div>
 
                 <div className='m-2 w-1/2'>
                     <Select onValueChange={HandleFilter}>
-                        <SelectTrigger>
+                        <SelectTrigger data-cy="home-prop-filter">
                             <SelectValue placeholder="Filter" />
                         </SelectTrigger>
                         <SelectContent className='max-w-[11rem]'>

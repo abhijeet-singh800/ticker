@@ -77,7 +77,7 @@ export default function NameForm(props: { onboard: string, setOriginal: (obj: Ta
               <FormItem className='my-2'>
                 <FormLabel className='font-poppins text-cWhite text-base pl-2'>First Name</FormLabel>
                 <FormControl>
-                  <Input placeholder="John" className='text-center text-lg' {...field} />
+                  <Input data-cy="nameForm-firstName" placeholder="John" className='text-center text-lg' {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -91,7 +91,7 @@ export default function NameForm(props: { onboard: string, setOriginal: (obj: Ta
               <FormItem className='my-2'>
                 <FormLabel className='font-poppins text-cWhite m-1 text-base pl-2'>Last Name</FormLabel>
                 <FormControl>
-                  <Input placeholder="Doe" className='text-center text-lg' {...field} />
+                  <Input data-cy="nameForm-lastName" placeholder="Doe" className='text-center text-lg' {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -106,7 +106,7 @@ export default function NameForm(props: { onboard: string, setOriginal: (obj: Ta
               <FormItem className='my-2'>
                 <FormLabel className='font-poppins text-cWhite m-1 text-base pl-2'>Nick Name</FormLabel>
                 <FormControl>
-                  <Input placeholder="Joe" className='text-center text-lg' {...field} />
+                  <Input data-cy="nameForm-nickName" placeholder="Joe" className='text-center text-lg' {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>

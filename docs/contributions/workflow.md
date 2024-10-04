@@ -40,7 +40,14 @@ git checkout -b issue-#<issue-num>-title
 Finally you can do what you love the most, Implement the solution for the Issue. 
 
 #### Write the Tests 
-If applicable, write tests to cover the new code or to validate the bug fix.
+If applicable, write tests to cover the new code or to validate the bug fix. This project uses Cypress. To run all of the test just run the following command 
+```
+npm run tests
+```
+If you are interested in running the test interactively in Cypress Browser just run 
+```
+npm run cypress
+```
 
 #### Commit the Changes 
 Well you seem confident in you changes, you should commit your changes to the local branch. The commit message should be atomic, clear and descriptive. Use the following command to commit the changes to the local branch.

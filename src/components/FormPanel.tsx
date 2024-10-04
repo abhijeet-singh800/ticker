@@ -25,8 +25,8 @@ export default function FormPanel(props: { onboard: string, setOriginal: (obj: T
     } else {
         return (
             <div className='flex w-full justify-center mt-28'>
-                <Button onClick={del_all} className='m-2' type='button'>Delete All Data</Button>
-                <Button type="submit" className='m-2'>Update Settings</Button>
+                <Button data-cy="nameform-delete-button" onClick={del_all} className='m-2' type='button'>Delete All Data</Button>
+                <Button data-cy="nameform-update-button" type="submit" className='m-2'>Update Settings</Button>
             </div>
         )
     }

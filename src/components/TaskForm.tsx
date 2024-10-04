@@ -112,13 +112,13 @@ export default function TaskForm(props: { new: string, original: TaskObj[], setO
                             <FormItem >
                                 <FormLabel className='hidden'>Enter you Form Title</FormLabel>
                                 <FormControl>
-                                    <Textarea placeholder="Type your Task Titile." {...field} className='text-xl' />
+                                    <Textarea data-cy="newform-title-input" placeholder="Type your Task Titile." {...field} className='text-xl' />
                                 </FormControl>
-                                <FormMessage className='text-center' />
+                                <FormMessage data-cy="newform-title-message" className='text-center' />
                             </FormItem>
                         )}
                     />
-                    <div className='ml-32 my-3'>
+                    <div className='ml-32 mr-32 my-3' data-cy="newform-list-div">
                         <FormField
                             control={form.control}
                             name="taskList"
@@ -126,7 +126,7 @@ export default function TaskForm(props: { new: string, original: TaskObj[], setO
                                 <FormItem>
                                     <FormLabel className='hidden'>Select a Task List</FormLabel>
                                     <Select onValueChange={field.onChange} defaultValue={default_task}>
-                                        <FormControl>
+                                        <FormControl >
                                             <SelectTrigger className='w-80' >
                                                 <SelectValue placeholder="No Task List Selected" />
                                             </SelectTrigger>
@@ -135,7 +135,7 @@ export default function TaskForm(props: { new: string, original: TaskObj[], setO
                                             {Item}
                                         </SelectContent>
                                     </Select>
-                                    <FormMessage className='text-center' />
+                                    <FormMessage data-cy="newform-list-message" className='text-center' />
                                 </FormItem>
                             )}
                         />
@@ -148,16 +148,16 @@ export default function TaskForm(props: { new: string, original: TaskObj[], setO
                             <FormItem >
                                 <FormLabel className='hidden'>Enter you Task Notes</FormLabel>
                                 <FormControl>
-                                    <Textarea placeholder="Type your Task Notes." value={field.value ?? ''} onChange={field.onChange} className='h-72 text-lg' />
+                                    <Textarea data-cy="newform-desc-input" placeholder="Type your Task Notes." value={field.value ?? ''} onChange={field.onChange} className='h-72 text-lg' />
                                 </FormControl>
-                                <FormMessage className='text-center' />
+                                <FormMessage data-cy="newform-desc-message" className='text-center' />
                             </FormItem>
                         )}
                     />
 
 
                     <div className='ml-32 my-3'>
-                        <Button type="submit" className='w-80' >Save</Button>
+                        <Button data-cy="newform-button-save" type="submit" className='w-80' >Save</Button>
                     </div>
 
 

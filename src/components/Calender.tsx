@@ -16,13 +16,13 @@ export default function Calender() {
             day = "Monday"
             break
         case 2:
-            day = "Tuesaday"
+            day = "Tuesday"
             break
         case 3:
             day = "Wednesday"
             break
         case 4:
-            day = "Thrusday"
+            day = "Thursday"
             break
         case 5:
             day = "Friday"
@@ -74,9 +74,9 @@ export default function Calender() {
 
     return (
         <div className='flex flex-col leading-none text-center pr-4'>
-            <div className='text-cWhite text-c2 font-poppins'>{day}</div>
-            <div className='text-cWhite text-c4 font-poppins'>{date}</div>
-            <div className='text-cWhite text-c2 font-poppins'>{month}</div>
+            <div data-cy="calender-day" className='text-cWhite text-c2 font-poppins'>{day}</div>
+            <div data-cy="calender-date" className='text-cWhite text-c4 font-poppins'>{date}</div>
+            <div data-cy="calender-month" className='text-cWhite text-c2 font-poppins'>{month}</div>
         </div>
     )
 }

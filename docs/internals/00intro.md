@@ -7,6 +7,7 @@ This is the list of the technologies used in the extension.
 ![Static Badge](https://img.shields.io/badge/React_Router-React_Router?style=flat&logo=reactrouter&color=%23000000)
 ![Static Badge](https://img.shields.io/badge/TypeScript-TypeScript?style=flat&logo=typescript&color=%23000000)
 ![Static Badge](https://img.shields.io/badge/TailWind-TailWind?style=flat&logo=tailwindcss&color=%23000000)
+![Static Badge](https://img.shields.io/badge/Cypress-Cypress?style=flat&logo=cypress&color=%23000000)
 ![Static Badge](https://img.shields.io/badge/Zod-Zod?logo=zod&logoColor=white&labelColor=black&color=black)
 ![Static Badge](https://img.shields.io/badge/shadcnUI-shadcnUI?style=flat&logo=shadcnui&color=%23000000)
 ![Static Badge](https://img.shields.io/badge/ESLint-ESLint?style=flat&logo=eslint&color=%23000000)
