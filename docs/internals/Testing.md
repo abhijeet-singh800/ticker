@@ -20,3 +20,6 @@ npm run tests
  `/cypress/support/commands.ts` - Have custom command that are frequently used in the testing process
  
  `/cypress/support/e2e.ts` - Have configurations for end to end tests
+
+ Hello world
+ 
