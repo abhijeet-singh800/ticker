@@ -33,7 +33,7 @@ describe('Testing the Redirects for the App', () => {
         cy.get('h2').should('contain', 'Page not found')
         cy.get('button').click()
 
-        cy.url().should('eq', 'http://localhost:5173/')
+        cy.url().should('eq', Cypress.config('baseUrl') + '/')
     })
 
     it('Testing Card Redirects', () => {
