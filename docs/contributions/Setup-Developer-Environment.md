@@ -35,4 +35,4 @@ And if you want to run the project in the production environment run
 npm run preview
 ```
 #### Load the Extension
-Open `chrome://extensions/` in Chrome and enable Developer Mode.Click "Load unpacked" and select the `dist` directory.
+Open `chrome://extensions/` in Chrome and enable Developer Mode.Click "Load unpacked" and select the `dist` directory. 

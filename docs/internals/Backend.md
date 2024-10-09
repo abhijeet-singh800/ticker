@@ -1,2 +1,0 @@
-### Backend 🚪
-Currently the extension uses Local Storage in the Chrome browser to store the data for the user. However in future its planned to adopt the Google Tasks API to interact directly with Google Tasks. For the same reason the backend of the project are decoupled. `src/utils/local.ts` contains function to interact with the local storage , these functions are used by `src/utils/utils.ts` that provide declarative functions that are used in `src/components` and `src/pages` to create UI elements. 

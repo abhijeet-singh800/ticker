@@ -1,7 +1,10 @@
-All the documentation efforts are done in Markdown for easy viewing and browsing. You can view the formatted text in GitHub itself by browsing and clicking on the appropriate files, further more in VSCode press `Ctrl+Shift+V`  to present Preview of the file for the same effect.
+<h1 style="text-align:center;"> <img src="../public/icon/extension-icon.png" alt="Extension Logo" width="50" align="center"/> Ticker </h1>
 
-There are three scopes of Documentation for this project 
+This is the home page for this documentation regarding the Ticker web extension.
 
-- `contributions` is a reference guide for efficient development of the project.
-- `internals` discuss about the internal structure of the Project which can provide special insight for the contributions efforts.
-- `incoming` documents the vision and incoming features to the Project.
+Like all good documentations this documentation has three domains 
+- Easy to follow `Usage` guides for beginners 
+- Reference materials about Internals of the Application
+- How to Contribution Guide for the developers
+
+Feel free to explore this space, you can see all the Pages organized in the sidebar for quick navigation. Don't forget to check our [Contributors](wiki/about-us/Contributors).
