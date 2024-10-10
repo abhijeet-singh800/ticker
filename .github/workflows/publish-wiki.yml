@@ -19,11 +19,11 @@ jobs:
   publish-wiki:
     runs-on: ubuntu-latest
     steps:
-      # Step 1: Checkout the main repository
+      # Step 1: Checkout the main repository (default to the root directory)
       - name: Checkout the main repository
         uses: actions/checkout@v3
 
-      # Step 2: Checkout the wiki repository
+      # Step 2: Checkout the wiki repository (into the 'wiki' folder)
       - name: Checkout the wiki repository
         uses: actions/checkout@v3
         with:
@@ -33,17 +33,34 @@ jobs:
       # Step 3: Rebuild the Wiki
       - name: Rebuilding the Wiki
         run: |
+          # Navigate to the wiki folder
           cd wiki
+          
+          # Clean the wiki repository (remove all files)
           git rm -rf .
           git clean -fd
+          
+          # Go back to the root of the repository
           cd ..
-          cp -r docs/. wiki/  
+          
+          # Copy the contents from the main repo's docs folder to the wiki folder
+          cp -r docs/. wiki/
+          
+          # Copy _Sidebar.md if it exists in the docs folder
           if [ -f docs/_Sidebar.md ]; then  
-            cp docs/_Sidebar.md wiki/  
+            cp docs/_Sidebar.md wiki/
           fi
+          
+          # Navigate back to the wiki directory
           cd wiki
+          
+          # Configure git with GitHub actions user identity
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor }}@users.noreply.github.com"
+          
+          # Add all changes and commit if there are any changes to commit
           git add .
           git commit -m "Update Wiki and Sidebar" || echo "No changes to commit"
+          
+          # Push the changes to the wiki repository
           git push
