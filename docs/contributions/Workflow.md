@@ -49,6 +49,10 @@ If you are interested in running the test interactively in Cypress Browser just 
 npm run cypress
 ```
 
+#### Write Documentation 
+Documentation is a very important part of the project. A good project without docs is the one without any users. It is very important that the documentations reflect the changes made in the code itself. All the documentation is stored in the `docs` folder. One must use great amount of attention while writing documentation because it cane make or break an project.
+
+
 #### Commit the Changes 
 Well you seem confident in you changes, you should commit your changes to the local branch. The commit message should be atomic, clear and descriptive. Use the following command to commit the changes to the local branch.
 ```bash
@@ -88,4 +92,6 @@ git commit -m "<Commit-Message>"
 ### Merging
 Once all feedback is addressed, and the reviewers approve, the PR can be merged into the main branch. You can use "Squash and merge" or "Rebase and merge" to keep the commit history clean, if necessary.
 
+### Adding your Credential to the Contributors File
+If this was first contribution to the project we request you to add you name and email in `docs/about-us/Contributors.md`
 

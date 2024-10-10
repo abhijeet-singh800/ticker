@@ -30,8 +30,12 @@ jobs:
           repository: ${{ github.repository }}.wiki
           path: wiki
 
-      - name: Copy docs content to the wiki repository
+      - name: Rebuilding the Wiki
         run: |
+          cd wiki
+          git rm -rf . 
+          git clean -fd
+          cd repo
           cp -r repo/docs/. wiki/  
           if [ -f repo/docs/_Sidebar.md ]; then  
             cp repo/docs/_Sidebar.md wiki/  
