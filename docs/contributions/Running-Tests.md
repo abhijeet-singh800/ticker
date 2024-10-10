@@ -10,7 +10,7 @@ npm run cypress
 This will open an pop up window. Currently this project only uses the E2E testing strategies thus you have to click the option for `E2E Testing`
 
 <div align="center">
-<img src="../../media/Cypress-Open.png" alt="Cypress Open" width=400/>
+<img src="media/Cypress-Open.png" alt="Cypress Open" width=400/>
 </div>
 
 No select you preferred browser and you will be presented with all your tests on the dashboard. To run an test just click on the file and it will execute that test file.

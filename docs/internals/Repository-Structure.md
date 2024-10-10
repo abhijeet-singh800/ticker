@@ -23,7 +23,7 @@ ticker
 # Logical Structure of the Project 
 Ticker is built in an with a hierarchy based structure. Smaller independent units are combined together into larger units. An illustration is given to understand this structure. 
 <div align="center">
-<img src="../../media/structure.png" alt="App Structure" width='350'/>
+<img src="media/structure.png" alt="App Structure" width='350'/>
 </div>
 
 Ticker is an React app that is made up of Pages, these Pages are further made up form reuseable component that are base on Shadcn UI components , various utilities functions are also used for developing these components. The directory structure of the App also mirror these logical structure in the `src` folder. 

@@ -1,6 +1,6 @@
 This document aims to explain `src` folder of the repository that contains the main code for the project. Reading this document you will have a strong understanding for the code of this project. As mentioned in the `Repository Structure` this folder has levels hierarchy based structure. 
 <div align="center">
-<img src="../../media/structure.png" alt="App Structure" width='350'/>
+<img src="media/structure.png" alt="App Structure" width='350'/>
 </div>
 
 To build an deep understanding of the project we will start form the bottom of this structure and lead upwards. The bottom most components are Shadcn-UI Components that are imported form the UI Component Library Library and Utilities written for easy access to some core functionalities while working on more higher levels.
